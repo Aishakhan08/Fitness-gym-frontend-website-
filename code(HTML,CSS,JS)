@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON PULSE | Premium Fitness</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #ff3e3e;
+            --bg-dark: #111111;
+            --bg-light: #1a1a1a;
+            --text-white: #ffffff;
+            --text-gray: #aaaaaa;
+            --transition: all 0.5s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 10%; background: rgba(0,0,0,0.9);
+            position: fixed; width: 100%; z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-white); font-weight: 500; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        .btn {
+            padding: 1rem 2.5rem; background: var(--primary-color); color: white;
+            text-decoration: none; font-weight: bold; border-radius: 5px;
+            transition: var(--transition); text-transform: uppercase; border: none; cursor: pointer;
+            display: inline-block;
+        }
+        .btn:hover { background: #0e0e0f; transform: scale(1.05); }
+
+        /* --- PAGE 1: HERO (VIDEO) --- */
+        .hero {
+            height: 100vh; position: relative; display: flex;
+            justify-content: center; align-items: center; text-align: center; overflow: hidden;
+        }
+        #bg-video {
+            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
+            z-index: -1; transform: translate(-50%, -50%); object-fit: cover;
+        }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--primary-color); }
+
+        /* --- PAGE 2: PLANS --- */
+        .pricing-section {
+            min-height: 100vh; padding: 100px 10%;
+             background-image: url('https://media.istockphoto.com/id/1066842198/photo/weights-training-equipment.jpg?s=2048x2048&w=is&k=20&c=G15hcLpaE1-5M7_q-QV5udT5gGSTafm4BFTbBaWmRdU=');
+             text-align: center;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .section-title { font-size: 3rem; margin-bottom: 3rem; text-transform: uppercase; }
+        .section-title span { color: var(--primary-color); }
+        
+        .pricing-grid { display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+             }
+        .price-card { background: var(--bg-light); padding: 3rem 2rem; border-radius: 15px; transition: var(--transition); border: 1px solid #333; }
+        .price-card:hover { border-color: var(--primary-color); transform: translateY(-10px); }
+        .price-card .price { font-size: 3rem; font-weight: bold; color: var(--primary-color); margin: 1rem 0; }
+        .price-card ul { list-style: none; margin-bottom: 2rem; color: var(--text-gray); text-align: left; }
+        .price-card ul li { margin-bottom: 10px; }
+
+        /* --- PAGE 3: FULL SCREEN IMAGE SLIDER --- */
+        .slider-page {
+            height: 100vh; width: 100%; position: relative; overflow: hidden;
+        }
+        .swiper { width: 100%; height: 100vh; }
+        .swiper-slide { position: relative; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .slider-content {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            z-index: 10; text-align: center; width: 100%;
+        }
+        .slider-content h2 { font-size: 5rem; text-transform: uppercase; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); }
+        .slider-content h2 span { color: var(--primary-color); }
+/* --- PAGE 4: Card-section --- */
+      .cards-section{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:25px;
+    padding:80px 10%;
+}
+
+/* CARD */
+.card{
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    border-radius:20px;
+    padding:20px;
+    color:white;
+    position:relative;
+    overflow:hidden;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* TEXT */
+.card h3{
+    margin:0;
+    font-size:20px;
+}
+
+.card p{
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    margin-top:15px;
+    border-radius:15px;
+}
+        /* --- PAGE 5: REGISTRATION FORM --- */
+        .registration-page {
+            min-height: 100vh;
+             background-image: url('https://media.istockphoto.com/id/952352556/photo/checking-at-gym.jpg?s=2048x2048&w=is&k=20&c=bodVl82rlejgKlwr898Q5KhhpU9beUgxVqLK88K5sEo=');
+            display: flex; justify-content: center; align-items: center; padding: 100px 10%;
+        }
+        .form-container {
+            background: var(--bg-light); padding: 4rem; border-radius: 20px;
+            width: 100%; max-width: 650px; border-right: 5px solid var(--primary-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .join-form { display: flex; flex-direction: column; gap: 1.5rem; }
+        .input-group input, .input-group select {
+            width: 100%; padding: 15px; background: #222; border: 1px solid #444;
+            color: white; border-radius: 8px; outline: none; font-size: 1rem;
+        }
+        .input-group input:focus { border-color: var(--primary-color); }
+
+        footer { text-align: center; padding: 2rem; background: #000; color: var(--text-gray); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .slider-content h2 { font-size: 2.5rem; }
+            .form-container { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IRON<span>PULSE</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pricing">Plans</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline id="bg-video">
+             <source src="https://media.istockphoto.com/id/1351950374/video/animation-of-glowing-interface-processing-data-over-people-exercising-at-gym.mp4?s=mp4-640x640-is&k=20&c=Dtpt756y14Gkb3KhGtZMhx-yMHikEwODX0EwuHkKODU=" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Push Your <span>Limits</span></h1>
+            <p style="margin-bottom: 2rem;">The only bad workout is the one that didn't happen.</p>
+            <a href="#pricing" class="btn">View Memberships</a>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <h2 class="section-title">Choose Your <span>Plan</span></h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <div class="price">$29/mo</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Gym Floor Access</li>
+                    <li><i class="fas fa-check"></i> Locker Room</li>
+                    <li><i class="fas fa-times"></i> Personal Trainer</li>
+                </ul>
+                <a href="#register" class="btn">Get Started</a>
+            </div>
+            <div class="price-card" style="border-color: var(--primary-color);">
+                <h3>Elite</h3>
+                <div class="price">$59/mo</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> All Access</li>
+                    <li><i class="fas fa-check"></i> 1-on-1 Coaching</li>
+                    <li><i class="fas fa-check"></i> Nutrition Guide</li>
+                </ul>
+                <a href="#register" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-page" id="gallery">
+        <div class="slider-content">
+            <h2>READY TO <span>START?</span></h2>
+            <p style="font-size: 1.5rem; letter-spacing: 3px;">SWIPE TO SEE YOUR FUTURE SELF</p>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" alt="Gym 1">
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=80" alt="Gym 2">
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1920&q=80" alt="Gym 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cards-section">
+
+  <div class="card">
+    <h3>tranform </h3>
+    <p>Get coached to lose weight for good</p>
+    <img src="https://www.shutterstock.com/shutterstock/videos/1098930247/thumb/6.jpg?ip=x480" alt="">
+    </div>
+
+  <div class="card">
+    <h3>The .fit way</h3>
+    <p>Making health easy, one day at a time</p>
+    <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="">
+  </div>
+
+  <div class="card">
+    <h3>Workout Gear</h3>
+    <p>Everything you need for your workout</p>
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="">
+  </div>
+
+  <div class="card">
+    <h3>Diet.fit</h3>
+    <p>Nutrition That Builds Power</p>
+    <img src="https://www.guardian.in/cdn/shop/articles/Gym_Diet_For_Beginners.jpg?v=1739877184&width=1400" alt="">
+    </div>
+</section>
+
+
+    <section class="registration-page" id="register">
+        <div class="form-container">
+            <h2 style="margin-bottom: 2rem; text-align: center; font-size: 2.5rem;">JOIN THE <span>PULSE</span></h2>
+            <form id="contact-form" class="join-form">
+                <div class="input-group">
+                    <input type="text" name="user_name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="user_email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" name="user_phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <select name="plan">
+                        <option value="Basic">Basic Membership</option>
+                        <option value="Elite">Elite Membership</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit-btn" class="btn" style="width: 100%;">Finalize Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 IRON PULSE Fitness. No Excuses.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Full Screen Swiper Logic
+        const swiper = new Swiper(".mySwiper", {
+            effect: "creative",
+            creativeEffect: {
+                prev: { shadow: true, translate: [0, 0, -400] },
+                next: { translate: ["100%", 0, 0] },
+            },
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+        });
+
+        // EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            btn.innerText = 'Sending Request...';
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(() => {
+                    btn.innerText = 'Finalize Registration';
+                    alert('Success! Check your email for details.');
+                    this.reset();
+                }, (err) => {
+                    btn.innerText = 'Finalize Registration';
+                    alert("Failed: " + JSON.stringify(err));
+                });
+        });
+    </script>
+</body>
+</html>

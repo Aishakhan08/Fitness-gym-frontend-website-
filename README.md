@@ -41,7 +41,7 @@ python -m http.server 5500
 Replace `YOUR_PUBLIC_KEY`, `YOUR_SERVICE_ID`, `YOUR_TEMPLATE_ID` in all HTML files and `js/main.js`.
 
 **WhatsApp button:**  
-Replace `919876543210` with your number in `membership.html` and `contact.html`.
+Add whatsapp number in `membership.html` and `contact.html`.
 
 ---
 

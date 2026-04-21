@@ -54,5 +54,5 @@ Deployed via GitHub Pages:
 
 ## Author
 
-Made by — [Your Name]  
-College Project | 2025
+Made by — Saurabh Yadav  
+College Project | 2026

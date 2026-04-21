@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Plans — Iron Pulse Gym</title>
+  <meta name="description" content="Choose from Iron Pulse Gym's Basic, Pro, and Elite membership plans. Join online or via WhatsApp instantly." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* FAQ */
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: var(--border-acc); }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .faq-q i { color: var(--accent); transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-item.open .faq-q i { transform: rotate(45deg); }
+    .faq-a {
+      padding: 0 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 20px; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+      IRON<span>PULSE</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="membership.html" class="nav-cta">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ─────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&q=80');"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Membership</div>
+    <h1>MEMBERSHIP <span class="text-accent">PLANS</span></h1>
+  </div>
+</section>
+
+<!-- ── PRICING SECTION ───────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">Choose Your Plan</span>
+      <h2 class="section-title">INVEST IN <span class="text-accent">YOURSELF</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="margin: 0 auto;">All plans include access to our full facility. Upgrade anytime — no hidden charges, no lock-in contracts.</p>
+    </div>
+
+    <div class="plans-grid">
+      <!-- Basic -->
+      <div class="plan-card reveal">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">999</span>
+          <span class="period">per month</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Full gym floor access</li>
+          <li><i class="fas fa-check-circle"></i> Locker room & shower</li>
+          <li><i class="fas fa-check-circle"></i> 2 guest passes/month</li>
+          <li><i class="fas fa-check-circle"></i> Fitness assessment (first join)</li>
+          <li class="off"><i class="fas fa-times-circle"></i> Group classes included</li>
+          <li class="off"><i class="fas fa-times-circle"></i> Nutrition consultation</li>
+          <li class="off"><i class="fas fa-times-circle"></i> Personal trainer sessions</li>
+          <li class="off"><i class="fas fa-times-circle"></i> Recovery zone access</li>
+        </ul>
+        <a href="#join-form" class="btn btn-outline">
+          Get Started <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Pro (Featured) -->
+      <div class="plan-card featured reveal reveal-delay-1">
+        <div class="plan-badge">⚡ Most Popular</div>
+        <div class="plan-name" style="color: rgba(255,255,255,0.5);">Pro</div>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">1,799</span>
+          <span class="period">per month</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Everything in Basic</li>
+          <li><i class="fas fa-check-circle"></i> All group classes included</li>
+          <li><i class="fas fa-check-circle"></i> Monthly nutrition consultation</li>
+          <li><i class="fas fa-check-circle"></i> 2 personal trainer sessions/mo</li>
+          <li><i class="fas fa-check-circle"></i> Recovery zone access</li>
+          <li><i class="fas fa-check-circle"></i> Body composition tracking</li>
+          <li><i class="fas fa-check-circle"></i> Priority class booking</li>
+          <li class="off"><i class="fas fa-times-circle"></i> Unlimited PT sessions</li>
+        </ul>
+        <a href="#join-form" class="btn btn-primary" style="background:#fff; color:#000;">
+          <i class="fas fa-bolt"></i> Choose Pro
+        </a>
+      </div>
+
+      <!-- Elite -->
+      <div class="plan-card reveal reveal-delay-2">
+        <div class="plan-name">Elite</div>
+        <div class="plan-price">
+          <span class="currency">₹</span><span class="amount">2,999</span>
+          <span class="period">per month</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check-circle"></i> Everything in Pro</li>
+          <li><i class="fas fa-check-circle"></i> Unlimited PT sessions</li>
+          <li><i class="fas fa-check-circle"></i> Custom diet plan</li>
+          <li><i class="fas fa-check-circle"></i> Weekly progress reviews</li>
+          <li><i class="fas fa-check-circle"></i> VIP locker assignment</li>
+          <li><i class="fas fa-check-circle"></i> Bring a friend free (1/mo)</li>
+          <li><i class="fas fa-check-circle"></i> Supplement discounts (20%)</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 trainer support (WhatsApp)</li>
+        </ul>
+        <a href="#join-form" class="btn btn-gold">
+          <i class="fas fa-crown"></i> Go Elite
+        </a>
+      </div>
+    </div>
+
+    <!-- Annual savings note -->
+    <div style="text-align:center; margin-top:36px; padding:20px; background:rgba(255,193,7,0.05); border:1px solid rgba(255,193,7,0.2); border-radius:var(--radius-lg);">
+      <p style="color:var(--gold); font-family:'Barlow Condensed', sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:0.08em;">
+        <i class="fas fa-tag"></i>&nbsp; PAY ANNUALLY & SAVE 2 MONTHS FREE — Ask our team for details!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MEMBERSHIP FORM ─────────────────────────────── -->
+<section class="section membership-form-section" id="join-form">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">Option 1 — Online Form</span>
+      <h2 class="section-title">SUBMIT YOUR <span class="text-accent">REQUEST</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="margin: 0 auto;">Fill out the form below and we'll confirm your membership within 24 hours. No payment required online.</p>
+    </div>
+
+    <div class="form-container reveal">
+      <form id="membershipForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-name">Full Name *</label>
+            <input type="text" id="m-name" name="name" placeholder="Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="m-email">Email Address *</label>
+            <input type="email" id="m-email" name="email" placeholder="rahul@gmail.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-phone">Phone Number *</label>
+            <input type="tel" id="m-phone" name="phone" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-group">
+            <label for="m-plan">Select Plan *</label>
+            <select id="m-plan" name="plan" required>
+              <option value="" disabled selected>Choose a plan...</option>
+              <option value="Basic — ₹999/month">Basic — ₹999/month</option>
+              <option value="Pro — ₹1,799/month">Pro — ₹1,799/month (Most Popular)</option>
+              <option value="Elite — ₹2,999/month">Elite — ₹2,999/month</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="m-goal">Fitness Goal</label>
+          <select id="m-goal" name="message">
+            <option value="Weight Loss">Weight Loss</option>
+            <option value="Muscle Building">Muscle Building</option>
+            <option value="General Fitness">General Fitness</option>
+            <option value="Athletic Performance">Athletic Performance</option>
+            <option value="Flexibility & Recovery">Flexibility & Recovery</option>
+          </select>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary" style="font-size:1.05rem; padding:16px 32px;">
+            <i class="fas fa-paper-plane"></i> Submit Membership Request
+          </button>
+        </div>
+        <div id="formMsg" class="form-message"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHATSAPP SECTION ───────────────────────────────── -->
+<section class="whatsapp-section">
+  <div class="container">
+    <span class="section-label" style="justify-content:center;">Option 2 — Instant Join</span>
+    <h3>JOIN INSTANTLY VIA <span class="text-accent">WHATSAPP</span></h3>
+    <p>Prefer to talk to a human? Message us on WhatsApp and get started in minutes. Our team responds within 30 minutes during working hours.</p>
+    <a
+      href="https://wa.me/919876543210?text=Hi%20Iron%20Pulse%20Gym!%20I'm%20interested%20in%20joining.%20Please%20share%20more%20details%20about%20your%20membership%20plans.%20%F0%9F%92%AA"
+      class="btn btn-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp" style="font-size:1.4rem;"></i>
+      Chat on WhatsApp
+    </a>
+    <p style="margin-top:16px; font-size:0.85rem; color:var(--text-dim);">
+      <i class="fas fa-lock" style="color:var(--accent);"></i> Your number is never shared with third parties.
+    </p>
+  </div>
+</section>
+
+<!-- ── FAQ SECTION ───────────────────────────────────── -->
+<section class="section" style="background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header text-center">
+      <span class="section-label">Got Questions?</span>
+      <h2 class="section-title">FREQUENTLY <span class="text-accent">ASKED</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q">Is there a joining fee or registration charge? <i class="fas fa-plus"></i></button>
+        <div class="faq-a">No joining fee, no registration charge. You only pay the monthly membership amount. No hidden costs whatsoever.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I pause my membership if I travel? <i class="fas fa-plus"></i></button>
+        <div class="faq-a">Yes! Pro and Elite members can pause membership for up to 30 days per year at no extra charge. Simply notify us 3 days in advance.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What happens after I submit the form? <i class="fas fa-plus"></i></button>
+        <div class="faq-a">Our team will call or WhatsApp you within 24 hours to confirm your slot, collect the first month's payment, and schedule your free orientation session.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I try a class before joining? <i class="fas fa-plus"></i></button>
+        <div class="faq-a">Absolutely! We offer a free trial day for new visitors. Visit the gym, try a class, and get a tour — completely free, no pressure.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a student or corporate discount? <i class="fas fa-plus"></i></button>
+        <div class="faq-a">Yes! Students with valid ID get 15% off any plan. Corporate packages are available for teams of 5+. Contact us for group pricing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">IRON<span>PULSE</span></a>
+        <p>A premium fitness destination dedicated to transforming lives through strength, wellness, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="membership.html"><i class="fas fa-chevron-right"></i> Membership</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Plans</h4>
+        <ul>
+          <li><a href="#join-form"><i class="fas fa-chevron-right"></i> Basic — ₹999/mo</a></li>
+          <li><a href="#join-form"><i class="fas fa-chevron-right"></i> Pro — ₹1,799/mo</a></li>
+          <li><a href="#join-form"><i class="fas fa-chevron-right"></i> Elite — ₹2,999/mo</a></li>
+          <li><a href="#join-form"><i class="fas fa-chevron-right"></i> Annual Discount</a></li>
+          <li><a href="#join-form"><i class="fas fa-chevron-right"></i> Student Offer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i><span>123 Fitness Street, Sector 7<br>Varanasi, UP 221001</span></li>
+          <li><i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:info@ironpulsegym.com">info@ironpulsegym.com</a></li>
+          <li><i class="fas fa-clock"></i><span>Mon–Sat: 6 AM – 11 PM<br>Sunday: 8 AM – 8 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Iron Pulse Gym</span>. All rights reserved.</p>
+      <p>Designed with <span>♥</span> for college project</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('YOUR_PUBLIC_KEY');</script>
+<script src="main.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Pre-select plan from URL hash
+  const planMap = { '#basic': 'Basic — ₹999/month', '#pro': 'Pro — ₹1,799/month', '#elite': 'Elite — ₹2,999/month' };
+  const hash = window.location.hash.toLowerCase();
+  if (planMap[hash]) {
+    const sel = document.getElementById('m-plan');
+    if (sel) sel.value = planMap[hash];
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Classes — Iron Pulse Gym</title>
+  <meta name="description" content="Explore Iron Pulse Gym's classes — strength, HIIT, yoga, CrossFit, boxing, cycling and more. View our weekly timetable." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ── NAVBAR ────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+      IRON<span>PULSE</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="membership.html" class="nav-cta">Join Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ─────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1920&q=80');"></div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Services</div>
+    <h1>CLASSES & <span class="text-accent">SERVICES</span></h1>
+  </div>
+</section>
+
+<!-- ── CLASSES SECTION ──────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">TRAIN HARDER. <span class="text-accent">SMARTER.</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="margin: 0 auto;">8 specialized programs designed by experts to target every aspect of fitness — from raw strength to mind-body connection.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Classes</button>
+      <button class="filter-btn" data-filter="strength">Strength</button>
+      <button class="filter-btn" data-filter="cardio">Cardio</button>
+      <button class="filter-btn" data-filter="flexibility">Flexibility</button>
+      <button class="filter-btn" data-filter="combat">Combat</button>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <div class="service-card reveal" data-cat="strength">
+        <img class="service-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80" alt="Power Lifting" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Strength</span>
+          <h3>Power Lifting</h3>
+          <p>Master the squat, bench press, and deadlift under the supervision of our national-level certified coaches. Suitable for all skill levels.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-fire"></i> High Intensity</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1" data-cat="cardio">
+        <img class="service-img" src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=600&q=80" alt="HIIT Blast" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Cardio</span>
+          <h3>HIIT Blast</h3>
+          <p>High-Intensity Interval Training that maximizes calorie burn in minimum time. Perfect for fat loss, cardiovascular health, and endurance.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 45 min</span>
+            <span><i class="fas fa-fire"></i> Very High</span>
+            <span><i class="fas fa-users"></i> Max 20</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2" data-cat="flexibility">
+        <img class="service-img" src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=600&q=80" alt="Power Yoga" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Flexibility</span>
+          <h3>Power Yoga</h3>
+          <p>A dynamic yoga practice blending strength poses with flexibility work. Improves posture, reduces injury risk, and calms the mind.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 75 min</span>
+            <span><i class="fas fa-fire"></i> Medium</span>
+            <span><i class="fas fa-users"></i> Max 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal" data-cat="strength">
+        <img class="service-img" src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80" alt="CrossFit" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Strength</span>
+          <h3>CrossFit WOD</h3>
+          <p>Workout of the Day sessions that combine gymnastics, weightlifting, and metabolic conditioning. Builds total functional fitness.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-fire"></i> Very High</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1" data-cat="combat">
+        <img class="service-img" src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&q=80" alt="Boxing" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Combat</span>
+          <h3>Fitness Boxing</h3>
+          <p>Learn proper boxing technique while getting a full-body workout. Improves coordination, speed, endurance, and mental sharpness.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 55 min</span>
+            <span><i class="fas fa-fire"></i> High</span>
+            <span><i class="fas fa-users"></i> Max 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2" data-cat="cardio">
+        <img class="service-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Indoor Cycling" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Cardio</span>
+          <h3>Spin Cycling</h3>
+          <p>High-energy indoor cycling to music. Burns up to 600 calories per session while strengthening legs and building cardiovascular capacity.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 50 min</span>
+            <span><i class="fas fa-fire"></i> High</span>
+            <span><i class="fas fa-users"></i> Max 20</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal" data-cat="flexibility">
+        <img class="service-img" src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=80" alt="Pilates" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Flexibility</span>
+          <h3>Pilates Core</h3>
+          <p>Focused core strengthening through controlled Pilates movements. Excellent for posture correction, back pain relief, and body awareness.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-fire"></i> Medium</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1" data-cat="strength">
+        <img class="service-img" src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&q=80" alt="Personal Training" loading="lazy" />
+        <div class="service-body">
+          <span class="service-tag">Personal</span>
+          <h3>1-on-1 Training</h3>
+          <p>Completely personalized sessions tailored to your goals, schedule, and fitness level. Fastest route to your transformation.</p>
+          <div class="service-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-star"></i> Custom</span>
+            <span><i class="fas fa-users"></i> 1 Person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMETABLE ──────────────────────────────────────── -->
+<section class="section timetable-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">Schedule</span>
+      <h2 class="section-title">WEEKLY <span class="text-accent">TIMETABLE</span></h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="margin: 0 auto;">Plan your week. All classes are included in Pro & Elite membership plans.</p>
+    </div>
+    <div class="timetable-wrap reveal">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6:00 AM</td>
+            <td><span class="tt-class"><strong>Power Lifting</strong><span>Vikram Singh</span></span></td>
+            <td><span class="tt-class gold"><strong>Spin Cycling</strong><span>Neha Kapoor</span></span></td>
+            <td><span class="tt-class"><strong>Power Lifting</strong><span>Vikram Singh</span></span></td>
+            <td><span class="tt-class gold"><strong>HIIT Blast</strong><span>Neha Kapoor</span></span></td>
+            <td><span class="tt-class"><strong>CrossFit WOD</strong><span>Rohit Sharma</span></span></td>
+            <td><span class="tt-class gold"><strong>Spin Cycling</strong><span>Neha Kapoor</span></span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>8:00 AM</td>
+            <td><span class="tt-class gold"><strong>Power Yoga</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class"><strong>Pilates Core</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class gold"><strong>Power Yoga</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class"><strong>Pilates Core</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class gold"><strong>Power Yoga</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class"><strong>CrossFit WOD</strong><span>Rohit Sharma</span></span></td>
+            <td><span class="tt-class gold"><strong>Power Yoga</strong><span>Anjali Rao</span></span></td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+            <td><span class="tt-class gold"><strong>HIIT Blast</strong><span>Neha Kapoor</span></span></td>
+            <td><span class="tt-class"><strong>1-on-1</strong><span>By Appointment</span></span></td>
+          </tr>
+          <tr>
+            <td>5:00 PM</td>
+            <td><span class="tt-class gold"><strong>HIIT Blast</strong><span>Neha Kapoor</span></span></td>
+            <td><span class="tt-class"><strong>Fitness Boxing</strong><span>Rohit Sharma</span></span></td>
+            <td><span class="tt-class gold"><strong>HIIT Blast</strong><span>Neha Kapoor</span></span></td>
+            <td><span class="tt-class"><strong>Fitness Boxing</strong><span>Rohit Sharma</span></span></td>
+            <td><span class="tt-class gold"><strong>Spin Cycling</strong><span>Neha Kapoor</span></span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>7:00 PM</td>
+            <td><span class="tt-class"><strong>CrossFit WOD</strong><span>Rohit Sharma</span></span></td>
+            <td><span class="tt-class gold"><strong>Power Yoga</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class"><strong>Power Lifting</strong><span>Vikram Singh</span></span></td>
+            <td><span class="tt-class gold"><strong>Pilates Core</strong><span>Anjali Rao</span></span></td>
+            <td><span class="tt-class"><strong>Fitness Boxing</strong><span>Rohit Sharma</span></span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center; color:var(--text-muted); font-size:0.88rem; margin-top:20px;">
+      <i class="fas fa-info-circle" style="color:var(--accent);"></i>
+      Schedule subject to change. <a href="contact.html" style="color:var(--accent);">Contact us</a> for bookings or enquiries.
+    </p>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">IRON<span>PULSE</span></a>
+        <p>A premium fitness destination dedicated to transforming lives through strength, wellness, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="membership.html"><i class="fas fa-chevron-right"></i> Membership</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Classes</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Power Lifting</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> HIIT Blast</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Power Yoga</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> CrossFit</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Boxing</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Cycling</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i><span>123 Fitness Street, Sector 7<br>Varanasi, UP 221001</span></li>
+          <li><i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:info@ironpulsegym.com">info@ironpulsegym.com</a></li>
+          <li><i class="fas fa-clock"></i><span>Mon–Sat: 6 AM – 11 PM<br>Sunday: 8 AM – 8 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Iron Pulse Gym</span>. All rights reserved.</p>
+      <p>Designed with <span>♥</span> for college project</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('YOUR_PUBLIC_KEY');</script>
+<script src="main.js"></script>
+</body>
+</html>

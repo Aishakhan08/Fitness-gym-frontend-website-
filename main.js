@@ -1,4 +1,4 @@
-/* ============================================================
+321/* ============================================================
    IRON PULSE GYM — main.js
    ============================================================ */
 
@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      // ⚠️ Replace with your EmailJS credentials
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params, 'YOUR_PUBLIC_KEY');
+      // Replace with your EmailJS credentials
+      await emailjs.send('service_acobh3d', 'template_2u6ddrb', params, '1leYgcdw4PkX9VIwy');
       msg.className  = 'form-message success';
       msg.textContent = '✓ Request sent! We will contact you within 24 hours.';
       msg.style.display = 'block';
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params, 'YOUR_PUBLIC_KEY');
+      await emailjs.send('service_acobh3d', 'template_y0he3dx', params, '1leYgcdw4PkX9VIwy');
       msg.className   = 'form-message success';
       msg.textContent = '✓ Message sent! We will get back to you soon.';
       msg.style.display = 'block';

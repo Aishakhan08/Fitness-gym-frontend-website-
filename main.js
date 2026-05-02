@@ -1,10 +1,10 @@
-321/* ============================================================
+/* 
    IRON PULSE GYM — main.js
-   ============================================================ */
+    */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── NAVBAR ─────────────────────────────────────── */
+  /*  NAVBAR  */
   const navbar    = document.querySelector('.navbar');
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealEls.forEach(el => revealObserver.observe(el));
 
-  /* ── STATS COUNTER ──────────────────────────────── */
+  /*  STATS COUNTER  */
   const counters = document.querySelectorAll('.stat-number[data-target]');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, step);
   }
 
-  /* ── GALLERY FILTER ─────────────────────────────── */
+  /*  GALLERY FILTER */
   const filterBtns  = document.querySelectorAll('.filter-btn');
   const filterItems = document.querySelectorAll('[data-cat]');
 
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── LIGHTBOX ───────────────────────────────────── */
+  /* LIGHTBOX  */
   const lightbox    = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
 
@@ -137,10 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  /* ── SERVICES FILTER ────────────────────────────── */
+  /*  SERVICES FILTER  */
   // Re-uses filter logic above (data-cat on service cards)
 
-  /* ── MEMBERSHIP FORM (EmailJS) ───────────────────── */
+  /* 
+   MEMBERSHIP FORM (EmailJS)  */
   const memberForm = document.getElementById('membershipForm');
   memberForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -176,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ── CONTACT FORM (EmailJS) ──────────────────────── */
+  /* CONTACT FORM (EmailJS)  */
   const contactForm = document.getElementById('contactForm');
   contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();

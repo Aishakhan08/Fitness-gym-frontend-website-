@@ -47,8 +47,8 @@ Add whatsapp number in `membership.html` and `contact.html`.
 
 ## Live Demo
 
-Deployed via GitHub Pages:  
-`https://YOUR_USERNAME.github.io/ironpulse-gym/`
+Deployed in vercel   
+`(https://fitness-gym-frontend-website.vercel.app/)`
 
 ---
 
